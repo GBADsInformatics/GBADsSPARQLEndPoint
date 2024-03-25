@@ -1,0 +1,235 @@
+[PrefixDeclaration]
+:		https://gbadske.org/ontologies/2024/2/SpeciesTerm#
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+obda:		https://w3id.org/obda/vocabulary#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+
+[MappingDeclaration] @collection [[
+mappingId	MAPID-1
+target		:node1{species}/{country}/{year}/{datasource} a :Adult_beef_cattle ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Adult beef cattle'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Adult beef cattle'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Adult beef cattle'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Adult beef cattle'
+			ORDER BY species, country
+
+mappingId	MAPID-2
+target		:node1{species}/{country}/{year}/{datasource} a :Adult_dairy_cattle ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Adult dairy cattle'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Adult dairy cattle'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Adult dairy cattle'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Adult dairy cattle'
+			ORDER BY species, country
+
+mappingId	MAPID-3
+target		:node1{species}/{country}/{year}/{datasource} a :Bovines ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Bovines'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Bovines'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Bovines'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Bovines'
+			ORDER BY species, country
+
+mappingId	MAPID-4
+target		:node1{species}/{country}/{year}/{datasource} a :Buffaloes ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Buffaloes'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Buffaloes'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Buffaloes'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Buffaloes'
+			ORDER BY species, country
+
+mappingId	MAPID-5
+target		:node1{species}/{country}/{year}/{datasource} a :Calves ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Calves'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Calves'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Calves'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Calves'
+			ORDER BY species, country
+
+mappingId	MAPID-6
+target		:node1{species}/{country}/{year}/{datasource} a :Cattle ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Cattle'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Cattle'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Cattle'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Cattle'
+			ORDER BY species, country
+
+mappingId	MAPID-7
+target		:node1{species}/{country}/{year}/{datasource} a :Cattle_dairy ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Cattle, dairy'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Cattle, dairy'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Cattle, dairy'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Cattle, dairy'
+			ORDER BY species, country
+
+mappingId	MAPID-8
+target		:node1{species}/{country}/{year}/{datasource} a :Cattle_non-dairy ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Cattle, non-dairy'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Cattle, non-dairy'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Cattle, non-dairy'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Cattle, non-dairy'
+			ORDER BY species, country
+
+mappingId	MAPID-9
+target		:node1{species}/{country}/{year}/{datasource} a :Male_and_female_cattle ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Male and female cattle'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Male and female cattle'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Male and female cattle'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Male and female cattle'
+			ORDER BY species, country
+
+mappingId	MAPID-10
+target		:node1{species}/{country}/{year}/{datasource} a :Backyard_poultry ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Backyard poultry'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Backyard poultry'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Backyard poultry'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Backyard poultry'
+			ORDER BY species, country
+
+mappingId	MAPID-11
+target		:node1{species}/{country}/{year}/{datasource} a :Birds ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Birds'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Birds'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Birds'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Birds'
+			ORDER BY species, country
+
+mappingId	MAPID-12
+target		:node1{species}/{country}/{year}/{datasource} a :Broilers ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Broilers'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Broilers'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Broilers'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Broilers'
+			ORDER BY species, country
+
+mappingId	MAPID-13
+target		:node1{species}/{country}/{year}/{datasource} a :Chickens ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Chickens'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Chickens'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Chickens'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Chickens'
+			ORDER BY species, country
+
+mappingId	MAPID-14
+target		:node1{species}/{country}/{year}/{datasource} a :Layers ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Layers'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Layers'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Layers'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Layers'
+			ORDER BY species, country
+
+mappingId	MAPID-15
+target		:node1{species}/{country}/{year}/{datasource} a :Other_commercial_poultry ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Other commercial poultry'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Other commercial poultry'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Other commercial poultry'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Other commercial poultry'
+			ORDER BY species, country
+
+mappingId	MAPID-16
+target		:node1{species}/{country}/{year}/{datasource} a :Turkeys ; :species {species}^^xsd:string ; :country {country}^^xsd:string ; :year {year}^^xsd:string ; :datasource {datasource}^^xsd:string . 
+source		SELECT distinct species, country, "year", 'livestock_countries_population_oie' as datasource FROM "livestock_countries_population_oie" WHERE species = 'Turkeys'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_eurostat' as datasource FROM "livestock_countries_population_eurostat"
+			WHERE species = 'Turkeys'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_unfccc' as datasource FROM "livestock_countries_population_unfccc"
+			WHERE species = 'Turkeys'
+			UNION
+			SELECT distinct species, country, "year", 'livestock_countries_population_faostat' as datasource FROM "livestock_countries_population_faostat"
+			WHERE species = 'Turkeys'
+			ORDER BY species, country
+]]
+

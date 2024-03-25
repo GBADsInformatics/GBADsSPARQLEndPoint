@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://gbadske.org/ontologies/2024/2/SpeciesTerm#"
+     xml:base="https://gbadske.org/ontologies/2024/2/SpeciesTerm"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm">
+        <owl:versionIRI rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm/1.0.0"/>
+        <rdfs:comment xml:lang="en">This ontology is used to capture the term of the data sets of GBADS
+livestock_countries_population_oie
+livestock_countries_population_eurostat
+livestock_countries_population_unfccc
+livestock_countries_population_faostat</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#country -->
+
+    <owl:DatatypeProperty rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#country">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#datasource -->
+
+    <owl:DatatypeProperty rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#datasource">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#species -->
+
+    <owl:DatatypeProperty rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#species">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#year -->
+
+    <owl:DatatypeProperty rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#year">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Adult_beef_cattle -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Adult_beef_cattle">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Cattle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Adult_dairy_cattle -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Adult_dairy_cattle">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Cattle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Cattle -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Cattle">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Species"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Poultry -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Poultry">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Species"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Species -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Species"/>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Backyard_poultry -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Backyard_poultry">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Poultry"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Birds -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Birds">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Poultry"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Bovines -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Bovines">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Cattle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Broilers -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Broilers">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Poultry"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Buffaloes -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Buffaloes">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Cattle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Calves -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Calves">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Cattle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Cattle -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Cattle">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Cattle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Cattle_dairy -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Cattle_dairy">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Cattle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Cattle_non-dairy -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Cattle_non-dairy">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Cattle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Chickens -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Chickens">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Poultry"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Layers -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Layers">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Poultry"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Male_and_female_cattle -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Male_and_female_cattle">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Cattle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Other_commercial_poultry -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Other_commercial_poultry">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Poultry"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gbadske.org/ontologies/2024/2/SpeciesTerm#Turkeys -->
+
+    <owl:Class rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Turkeys">
+        <rdfs:subClassOf rdf:resource="https://gbadske.org/ontologies/2024/2/SpeciesTerm#All_Poultry"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Adult_beef_cattle"/>
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Adult_dairy_cattle"/>
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Bovines"/>
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Buffaloes"/>
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Calves"/>
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Cattle"/>
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Cattle_dairy"/>
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Cattle_non-dairy"/>
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Male_and_female_cattle"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Backyard_poultry"/>
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Birds"/>
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Broilers"/>
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Chickens"/>
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Layers"/>
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Other_commercial_poultry"/>
+            <rdf:Description rdf:about="https://gbadske.org/ontologies/2024/2/SpeciesTerm#Turkeys"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
