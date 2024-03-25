@@ -3,7 +3,7 @@ Ontop Command Line Interface
 
 ### How to run the end point.
 **run.bat** is used to run the endpoint.
-However, password needs to be added to **SpeciesTerm_V2.properties** file inside the **input** folder.
+However, a **password** needs to be added to **SpeciesTerm_V2.properties** file inside the **input** folder.
 
 
 
