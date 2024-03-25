@@ -1,6 +1,12 @@
 Ontop Command Line Interface
 ============================
 
+### How to run the end point.
+run.bat is used to run the endpoint.
+However, password needs to be added to SpeciesTerm_V2.properties file inside the input folder.
+
+
+
 This README file is describing the ontop command line interface (CLI).
 
 Ontop ships a shell script (ontop for Linux/OS X) and a bat file (ontop.bat for Windows).
