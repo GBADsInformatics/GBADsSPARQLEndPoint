@@ -32,10 +32,10 @@ jobs:
         BaseURL2=/sparql,
         ListenerRulePriority=22,
         ListenerRulePriority2=23,
-        MYSQL_HOST=${{ vars.MYSQL_HOST }},
-        MYSQL_DATABASE=${{ vars.MYSQL_DATABASE }},
-        MYSQL_USER=${{ vars.MYSQL_USER }},
-        MYSQL_PASSWORD=${{ secrets.MYSQL_PASSWORD }}
+        MYSQLHOST=${{ vars.MYSQL_HOST }},
+        MYSQLDATABASE=${{ vars.MYSQL_DATABASE }},
+        MYSQLUSER=${{ vars.MYSQL_USER }},
+        MYSQLPASSWORD=${{ secrets.MYSQL_PASSWORD }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     with:
