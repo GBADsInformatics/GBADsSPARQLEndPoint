@@ -1,0 +1,42 @@
+on:
+  push:
+    branches: [ "main" , "master" ]
+
+  workflow_dispatch:
+  
+jobs:
+  commit-hash:
+    name: Commit SHA
+    runs-on: ubuntu-latest
+    outputs:
+      sha7: ${{ steps.commit-hash.outputs.sha7 }}
+    steps:
+      - name: Get Commit SHA
+        id: commit-hash
+        run: echo "sha7=$(echo ${GITHUB_SHA} | cut -c1-7)" >> "$GITHUB_OUTPUT"
+
+  docker:
+    uses: GBADsInformatics/DevopsWorkflows/.github/workflows/docker.yml@v2.0
+    secrets: inherit
+    with:
+      IMAGE_NAME: sparql-endpoint
+
+  aws:
+    needs: [commit-hash, docker]
+    uses: GBADsInformatics/DevopsWorkflows/.github/workflows/aws.yml@v2.0
+    secrets:
+      template-input: >-
+        ApplicationName=sparql-endpoint,
+        DockerURI=gbadsinformatics/sparql-endpoint:${{ needs.commit-hash.outputs.sha7 }},
+        BaseURL=/ontologies,
+        BaseURL2=/sparql,
+        ListenerRulePriority=22,
+        ListenerRulePriority2=23,
+        MYSQL_HOST=${{ vars.MYSQL_HOST }},
+        MYSQL_DATABASE=${{ vars.MYSQL_DATABASE }},
+        MYSQL_USER=${{ vars.MYSQL_USER }},
+        MYSQL_PASSWORD=${{ secrets.MYSQL_PASSWORD }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    with:
+      stack-name: sparql-endpoint-stack
