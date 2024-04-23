@@ -4,7 +4,9 @@ FROM ontop/ontop
 # Copy in the options
 WORKDIR /opt/ontop
 COPY input/SpeciesTerm_v2.rdf input/SpeciesTerm_v2.obda input/prod.SpeciesTerm_v2.properties input/ 
+USER root
 RUN chown -R ontop:ontop input
+USER ontop
 
 COPY jdbc/mysql-connector-j-8.3.0.jar jdbc/
 # copy jdbc/mysql-connector-j-8.3.0.jar /opt/graphdb/dist/lib
