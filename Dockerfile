@@ -3,8 +3,8 @@ FROM ontop/ontop
 
 # Copy in the options
 WORKDIR /opt/ontop
-RUN chown -R ontop:ontop input
 COPY input/SpeciesTerm_v2.rdf input/SpeciesTerm_v2.obda input/prod.SpeciesTerm_v2.properties input/ 
+RUN chown -R ontop:ontop input
 
 COPY jdbc/mysql-connector-j-8.3.0.jar jdbc/
 # copy jdbc/mysql-connector-j-8.3.0.jar /opt/graphdb/dist/lib
