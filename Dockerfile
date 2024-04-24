@@ -4,7 +4,7 @@ FROM ontop/ontop
 # Install the necessary packages
 USER root
 RUN apt-get update && apt-get install -y \
-    envsubst \
+    gettext \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy in the options
