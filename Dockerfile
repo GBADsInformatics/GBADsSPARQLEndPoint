@@ -13,8 +13,8 @@ COPY input/SpeciesTerm_v2.rdf input/SpeciesTerm_v2.obda input/prod.SpeciesTerm_v
 RUN chown -R ontop:ontop input
 USER ontop
 
-COPY jdbc/mysql-connector-j-8.3.0.jar jdbc/
-# copy jdbc/mysql-connector-j-8.3.0.jar /opt/graphdb/dist/lib
+COPY jdbc/postgresql-42.7.3.jar jdbc/
+# copy jdbc/postgresql-42.7.3.jar /opt/graphdb/dist/lib
 
 ENV ONTOP_MAPPING_FILE=/opt/ontop/input/SpeciesTerm_v2.obda
 ENV ONTOP_ONTOLOGY_FILE=/opt/ontop/input/SpeciesTerm_v2.rdf
