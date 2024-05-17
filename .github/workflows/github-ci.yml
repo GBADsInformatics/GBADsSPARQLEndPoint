@@ -33,7 +33,9 @@ jobs:
         MYSQLHOST=${{ vars.MYSQL_HOST }},
         MYSQLDATABASE=${{ vars.MYSQL_DATABASE }},
         MYSQLUSER=${{ vars.MYSQL_USER }},
-        MYSQLPASSWORD=${{ secrets.MYSQL_PASSWORD }}
+        MYSQLPASSWORD=${{ secrets.MYSQL_PASSWORD }},
+        CPU=512,
+        Memory=1024
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     with:
