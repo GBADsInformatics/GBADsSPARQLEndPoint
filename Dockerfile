@@ -1,5 +1,10 @@
 # Base ontop image
-FROM ontop/ontop-endpoint
+FROM ontop/ontop-endpoint:latest
+
+# Switch to legacy Debian Buster repositories
+RUN echo "deb http://archive.debian.org/debian/ buster main" > /etc/apt/sources.list && \
+    echo "deb http://archive.debian.org/debian-security/ buster/updates main" >> /etc/apt/sources.list && \
+    echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99no-check-valid-until
 
 # Install the necessary packages
 RUN apt-get update && apt-get install -y \
@@ -27,6 +32,4 @@ RUN rm /etc/nginx/sites-enabled/*
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Start supervisord when the container has launched
-ENTRYPOINT envsubst < /opt/ontop/input/prod.SpeciesTerm_v2.properties > /opt/ontop/input/prod.sub.SpeciesTerm_v2.properties && \
-    sed -i "s|\$BASE_URL|${BASE_URL}|g" /etc/nginx/conf.d/default.conf && \
-    /usr/bin/supervisord
+ENTRYPOINT ["sh", "-c", "envsubst < /opt/ontop/input/prod.SpeciesTerm_v2.properties > /opt/ontop/input/prod.sub.SpeciesTerm_v2.properties && sed -i \"s|\\$BASE_URL|${BASE_URL}|g\" /etc/nginx/conf.d/default.conf && /usr/bin/supervisord"]
